@@ -9,10 +9,19 @@ public class Person {
 
     public String toString() {
         StringBuffer personString = new StringBuffer();
-        personString.append("firstName = " + firstName);
+        personString.append(firstName);
+        personString.append(" ");
+        personString.append(lastName);
         personString.append("\n");
-        personString.append("lastName = " + lastName);
-        personString.append("\n");
+
+        return personString.toString();
+    }
+
+    public String formatAsCSV() {
+        StringBuffer personString = new StringBuffer();
+        personString.append(firstName);
+        personString.append(",");
+        personString.append(lastName);
 
         return personString.toString();
     }
